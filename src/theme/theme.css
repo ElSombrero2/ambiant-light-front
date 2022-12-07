@@ -1,0 +1,147 @@
+div.input{
+    width: fit-content;
+}
+
+div.input label{
+    color: white;
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    font-size: 15px;
+    opacity: 0.5;
+}
+
+div.divider{
+    width: 100%;
+    height: 1px;
+    background-color: #FFFFFF22;
+}
+
+input.input, select.input{
+    padding: 13px 15px;
+    color: white;
+    background-color: #313133;
+    border-radius: 5px;
+    box-shadow: none;
+    outline: none;
+    border: none;
+}
+
+input.input.rounded, select.input.rounded{
+    border-radius: 25px;
+}
+
+input.input + .icon{
+    position: absolute;
+    margin-right: 20px;
+}
+
+div.input.icon{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+div.input.icon input.input{
+    padding-right: 45px;
+    padding-left: 30px;
+}
+
+
+div.checkbox{
+    width: fit-content;
+    color: white;
+}
+
+div.checkbox span{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+div.checkbox input{
+    margin-right: 10px;
+    display: none;
+}
+
+div.checkbox small{
+    display: block;
+    color: white;
+    font-weight: 600;
+    margin-top: 8px;
+    padding-left: 5px;
+    opacity: 0.2;
+}
+
+div.checkbox input:disabled + span{
+    opacity: 0.2;
+}
+
+div.checkbox input + span::before{
+    content: ' ';
+    width: 17px;
+    height: 17px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    margin-right: 9px;
+    transition: content 100ms, background-color 100ms, transform 600ms;
+}
+
+div.checkbox input:checked + span::before{
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    content: '\f00c';
+    font-size: 14px;
+    color: #313133;
+    background-color: white;
+    transform: rotateX(360deg);
+}
+
+.text-white{ color: white; }
+
+.button{
+    background-color: transparent;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.button.rounded{
+    border-radius: 20px;
+}
+
+.button.green{
+    background-color: #1DB954;
+    color: white;
+}
+
+.button:active{
+    box-shadow: 0px 0px 1px 2px #55aaff66;
+}
+
+.button.full-width{
+    width: 80%;
+}
+
+.green.button:active{
+    box-shadow: 0px 0px 4px 2px #1DB95466;
+}
+
+.button.gray{
+    background-color: #4B4F52;
+    color: white;
+}
+
+.button.blue{
+    background-color: #3F7DAA;
+    color: white;
+}
+
+.button:disabled{
+    opacity: 0.3;
+    box-shadow: none !important;
+}

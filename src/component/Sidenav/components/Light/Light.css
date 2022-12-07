@@ -1,0 +1,67 @@
+div.light{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+div.light div.lightbulb{
+    width: 60px;
+    height: 60px;
+    border-radius: 80px;
+    border: solid white 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    color: white;
+}
+
+div.light div.range{
+    width: 70%;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #31313388;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    color: white;
+}
+
+div.light div.range input[type="range"]{ 
+    -webkit-appearance: none;
+    appearance: none;
+    margin-right: 15px;
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: white;
+    background-repeat: no-repeat;
+}
+
+div.light div.range input[type="range"]::-webkit-slider-runnable-track{ 
+    -webkit-appearance: none;
+    appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    border-radius: 5px;
+    height: 5px;
+}
+
+div.light div.range input[type="range"]::-webkit-slider-thumb{ 
+    -webkit-appearance: none;
+    appearance: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 15px;
+    position: relative;
+    top: -5px;
+    background: white;
+    cursor: ew-resize;
+    box-shadow: 0 0 2px 0 #555;
+    transition: background .3s ease-in-out;
+}

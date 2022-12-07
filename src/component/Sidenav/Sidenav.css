@@ -1,0 +1,10 @@
+div.sidenav{
+    width: 275px;
+    height: 100vh;
+    background-color: #3D3C3F;
+    padding: 0px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}

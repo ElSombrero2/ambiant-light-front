@@ -1,0 +1,84 @@
+div.content-grid{
+    width: 100%;
+    display: flex;
+}
+
+div.main-container{
+    overflow: hidden;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+div.main div.title{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 60px 0px;
+    margin-bottom: 30px;
+}
+
+div.profile-container{
+    padding: 0px 60px;
+}
+
+div.cards {
+    padding: 5px;
+    display: flex;
+    gap: 0px 35px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow: auto;
+    height: 80vh;
+    padding-bottom: 50px;
+}
+
+div.cards div.card{
+    margin-bottom: 30px;
+}
+
+div.cards::-webkit-scrollbar {
+    width: 5px;
+}
+
+div.cards::-webkit-scrollbar-thumb {
+    width: 5px;
+    background-color: #1C1C1C;
+    border-radius: 5px;
+}
+
+div.cards::-webkit-scrollbar-track {
+    width: 5px;
+}
+
+div.right{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+div.create{
+    cursor: pointer;
+}
+
+div.create span{
+    display: block;
+    transition: transform 600ms, opacity 300ms;
+}
+
+div.create span:hover{
+    transform: rotateZ(180deg);
+}
+
+div.create span:active{
+    opacity: 0.4;
+}
+
+div.animation-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
