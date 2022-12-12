@@ -1,0 +1,1 @@
+export enum Animation{ NONE = 0, BLINK = 1, SNAKE = 2, COLLISION = 3, PING_PONG = 4 }

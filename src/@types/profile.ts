@@ -1,10 +1,10 @@
 
 export interface Setting{
     brightness: number
-    animation: string | null
+    animation: number
     token: string | null
-    animationDelay: number
-    animatedFromCurrentSong: boolean
+    animation_delay: number
+    animated_from_current_song: boolean
 }
 
 export interface Profile{
@@ -12,33 +12,31 @@ export interface Profile{
     port: string | null
     light: boolean
     leds: number
-    isAmbiantLight: boolean
-    start: string
-    end: string
-    wifiAccessPoint: string
-    wifiPassword: string
-    ipAddress: string
+    is_ambiant_light: boolean
+    colors: string[]
+    wifi_access_point: string
+    wifi_password: string
+    ip_address: string
     setting: Setting
 }
 
 export const createEmptyProfile = (): Profile => {
     return {
         setting: {
-            brightness: 0.5,
-            animation: null,
-            token: null,
-            animationDelay: 500,
-            animatedFromCurrentSong: false
+            brightness: 5,
+            animation: 0,
+            token: '',
+            animation_delay: 10,
+            animated_from_current_song: false
         },
         light: false,
         leds: 10,
-        isAmbiantLight: false,
-        start: '#ffffff',
-        end: '#ffffff',
-        wifiAccessPoint: '',
-        wifiPassword: '',
-        ipAddress: '',
-        name: '',
-        port: null
+        is_ambiant_light: false,
+        colors: ["#00ff00", "#ff0000", "#0000ff"],
+        wifi_access_point: '',
+        wifi_password: '',
+        ip_address: '',
+        name: 'My Profile',
+        port: ''
     }
 }

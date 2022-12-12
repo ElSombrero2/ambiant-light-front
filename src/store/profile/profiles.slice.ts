@@ -1,6 +1,5 @@
-import { createSlice, current } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import { Profile } from "../../@types/profile";
-
 
 export const ProfilesSlice = createSlice({
     name: 'profiles',

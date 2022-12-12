@@ -12,6 +12,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import { createEmptyProfile, Profile } from './@types/profile'
 import { add, remove } from './store/profile/profiles.slice'
 import { ConditionnalContainer } from './component/ConditionnalContainer/ConditionnalContainer'
+import { Body, getClient } from '@tauri-apps/api/http'
+import { invoke } from '@tauri-apps/api'
+import { set } from './store/ports/ports.slice'
 
 function App() {
 
@@ -23,10 +26,25 @@ function App() {
 
   const removeProfile = (index: number) => dispatch(remove(index))
 
+  invoke('getSerialPorts')
+  .then(ports => dispatch(set(ports)))
+
   const save = async () => {
     setLoading(true)
     setTimeout(() => setLoading(false), 3000)
   }
+
+  const onColorChange = async (elements: any[]) => {
+    try{
+        const client = await getClient();
+        const response = await client.post('http://192.168.1.116/colors', undefined, {
+          body: Body.json({colors: elements})
+        });
+        console.log(response)
+    }catch(e){
+        console.log(e)
+    }
+  } 
 
   return (
     <div className='main-container'>
@@ -67,7 +85,7 @@ function App() {
                     key={index} 
                     onSave={save} 
                     onCancel={() => removeProfile(index)} 
-                    onColorChange={() => {}} 
+                    onColorChange={onColorChange} 
                   />)}
                 </div>} 
               />
